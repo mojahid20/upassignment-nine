@@ -5,7 +5,7 @@ import Coustomlink from '../Coustomlink/Coustomlink';
 
 const Header = () => {
     return (
-        <div className='bg-dark p-4 text-center'>
+        <div className='bg-dark p-4 text-center stiky'>
             <div className='main-nav'>
               <Coustomlink to='/' >Home</Coustomlink>
               <Coustomlink to='/revews' >Revews</Coustomlink>
