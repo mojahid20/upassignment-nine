@@ -1,10 +1,17 @@
 import React from 'react';
 import './Hompage.css';
 import logo from '../../image/images (3).jpg'
+import Revew from '../Revew/Revew';
 
 const Hompage = () => {
+    const revews=[
+        {id:1, name:'jhon',comments:'good', ratings:3.5},
+        {id:2, name:'jibon',comments:'better', ratings:4.5},
+        {id:3, name:'moron',comments:'best', ratings:5.00},
+    ]
     return (
-        <div className='hompage'>
+        <div>
+            <div className='hompage'>
             <div className='left'>
                 <h1>Most costable perfume</h1>
                 <p>I like perfume a lot, If you use perfume, <br /> your mind stays calm
@@ -14,7 +21,25 @@ const Hompage = () => {
             <div className='right'>
                 <img src={logo} alt="" />
             </div>
+
+            
         </div>
+        <div>
+            <h1 className='text-center mt-5'>Coustomer revews</h1>
+            {
+                revews.map(revew=> <Revew key={revew.id}
+                    revew={revew}
+                
+                ></Revew>)
+            }
+            <div class="d-grid gap-2 col-6 mx-auto mb-5 outline-0">
+             <button class="btn btn-primary" type="button">See All Revews</button>
+  
+             </div>
+        </div>
+        </div>
+
+        
     );
 };
 
