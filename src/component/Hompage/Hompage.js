@@ -2,6 +2,7 @@ import React from 'react';
 import './Hompage.css';
 import logo from '../../image/images (3).jpg'
 import Revew from '../Revew/Revew';
+import { Link } from 'react-router-dom';
 
 const Hompage = () => {
     const revews=[
@@ -32,12 +33,15 @@ const Hompage = () => {
                 
                 ></Revew>)
             }
-            <div class="d-grid gap-2 col-6 mx-auto mb-5 outline-0">
-             <button class="btn btn-primary" type="button">See All Revews</button>
+            <div className='d-grid gap-2 col-2 mx-auto mb-4 '>
+            <Link to='/revews' ><button class="btn btn-primary" type="button">See All Revews</button></Link>
+             
   
              </div>
         </div>
+        
         </div>
+        
 
         
     );
